@@ -1,0 +1,110 @@
+/* Match the desktop breakpoint in mobile-menu.js; leave larger screens intact. */
+@media (max-width: 1279.98px) {
+  #site-header.tp-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1000;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  #site-header::before,
+  #site-header .tp-header__hem {
+    pointer-events: none;
+  }
+
+  #site-header .tp-header__bar {
+    position: relative;
+    z-index: 1;
+  }
+
+  #site-header .tp-header__end {
+    position: relative;
+    z-index: 2;
+  }
+
+  #site-header .tp-header__nav {
+    display: none;
+  }
+
+  #site-header .tp-header__name {
+    display: inline;
+  }
+
+  #site-header [data-menu-toggle] {
+    position: relative;
+    z-index: 3;
+    display: inline-flex;
+    flex-shrink: 0;
+    min-height: 44px;
+    pointer-events: auto;
+    touch-action: manipulation;
+  }
+
+  #site-header .tp-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    height: 100dvh;
+    max-height: none;
+    margin: 0;
+    border: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #site-header .tp-menu:not([open]) {
+    display: none;
+    pointer-events: none;
+  }
+
+  #site-header .tp-menu[open] {
+    display: block;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  #site-header .tp-menu::backdrop {
+    background: rgb(42 23 14 / 40%);
+  }
+
+  #site-header .tp-menu > div {
+    height: auto;
+    min-height: 100%;
+    padding-top: max(1.25rem, env(safe-area-inset-top));
+  }
+
+  #site-header .tp-menu > div > div,
+  #site-header .tp-menu nav {
+    flex-shrink: 0;
+  }
+
+  #site-header .tp-menu > div > div:first-child {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--color-honey);
+  }
+
+  #site-header [data-menu-close] {
+    flex-shrink: 0;
+    touch-action: manipulation;
+  }
+
+  html.tp-menu-open,
+  html.tp-menu-open body {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
+  html.tp-menu-open body {
+    position: fixed;
+    top: var(--tp-menu-scroll-y);
+    width: 100%;
+  }
+}

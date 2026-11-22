@@ -1,3 +1,6 @@
-Mirrored with HTTrack Online (https://httrack.app)
-Source: https://puppy.instabizweb.com/
+PawHaven - Premium Pet Website
+
+Project Repository: https://github.com/PanchalPalak22/PawHaven
+
+Original Source: https://puppy.instabizweb.com/
 Files: 503
